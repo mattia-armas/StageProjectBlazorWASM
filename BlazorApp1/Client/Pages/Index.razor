@@ -1,0 +1,20 @@
+﻿@page "/"
+<AuthorizeView>
+    <Authorized>
+        <p>Welcome to BlazorApp</p>
+        <SurveyPrompt Title="How is Blazor working for you?" />
+    </Authorized>
+    <Authorizing>
+        <h1>
+            <div id="app">
+                <div style="position:absolute; top:30vh; width:100%; text-align:center">
+                    <h1>My application</h1>
+                    <div style="display:flex; gap:10px; justify-content:center; align-items:center">
+                        <div class="spinner-border" role="status"></div>
+                        The application is loading...
+                    </div>
+                </div>
+            </div>
+        </h1>
+    </Authorizing>
+</AuthorizeView>
