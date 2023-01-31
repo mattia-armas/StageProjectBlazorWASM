@@ -78,4 +78,18 @@ main[b-s8xsnq6cv2] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+    .btn[b-s8xsnq6cv2] {
+        color: #b23b3b;
+    }
+    .btn:hover[b-s8xsnq6cv2] {
+        background-color: #b23b3b;
+        color: #ffffff;
+        border: #ffffff;
+    }
+    .span[b-s8xsnq6cv2] {
+        color : #b23b3b;
+    }
+    .span:hover[b-s8xsnq6cv2] {
+        color: #ffffff;
+    }
 }
