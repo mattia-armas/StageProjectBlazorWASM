@@ -3,7 +3,7 @@ using System.Net.Http.Json;
 public interface IAuthService
 {
     Task Login(LoginRequest loginRequest);
-    Task Register(RegisterRequest1 registerRequest);
+    Task Register(RegisterRequest registerRequest);
     Task Logout();
     Task<CurrentUser> CurrentUserInfo();
 }
@@ -31,7 +31,7 @@ public class AuthService : IAuthService
         var result = await _httpClient.PostAsync("api/auth/logout", null);
         result.EnsureSuccessStatusCode();
     }
-    public async Task Register(RegisterRequest1 registerRequest)
+    public async Task Register(RegisterRequest registerRequest)
     {
         var result = await _httpClient.PostAsJsonAsync("api/auth/register", registerRequest);
         if (result.StatusCode == System.Net.HttpStatusCode.BadRequest) throw new Exception(await result.Content.ReadAsStringAsync());

@@ -1,11 +1,11 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager navigationManager
 @inject CustomStateProvider authStateProvider
-<div class="page">
-<div class="sidebar">
-    <NavMenu />
-</div>
 
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
     <main>
         <div class="top-row">
             <button type="button" class="btn btn-default btn-sm" @onclick="@LogoutClick"> <span class="oi oi-account-logout"></span> Log out</button>
@@ -14,7 +14,6 @@
             @Body
         </div>
     </main>
-    
 </div>
  
 @functions{

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
 
-public class RegisterRequest1
+public class RegisterRequest
 {
     [Required]
     public string UserName { get; set; }
