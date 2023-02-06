@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Rshf6VhOTobPIPN8Id2SB7/f2TemXwOQd5JThRV4VFsE+gQHFV1DNBNShEcVGgvbptBZInh3hE1qgsvoshk5xQ==",
+  "dgSpecHash": "bzoYbgj47e9CU/FW/uhulN4SFTUhwRW/kQQxhwwsMzqRJKgf4IgqjDJw3mJ6Uo3kRY+iQSZI4L7H9nutGm6GIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Armas\\Desktop\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
+  "projectFilePath": "C:\\Users\\bk691\\Desktop\\kappas-prova\\StageProjectBlazorWASM\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Armas\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\bk691\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\bk691\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\bk691\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\bk691\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

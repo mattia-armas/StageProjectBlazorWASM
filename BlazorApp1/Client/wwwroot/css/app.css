@@ -18,6 +18,10 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
 .content {
     padding-top: 1.1rem;
 }
@@ -62,3 +66,101 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Loading");
+    }
+
+    /* css begin*/
+    .parentUl li ul {
+        border-left: dashed 2px black;
+        height: fit-content;
+        border-start-end-radius: 2px;
+    }
+
+    ul, .parentUl {
+        list-style-type: none;
+    }
+
+        .parentUl ul li {
+            position: relative;
+        }
+
+            .parentUl ul li:before {
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: -40px;
+                width: 40px;
+                height: 1px;
+                border-bottom: dashed 2px black;
+            }
+
+    .parentUl {
+        margin: 0;
+        padding: 0;
+    }
+
+    .caret {
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari 3.1+ */
+        -moz-user-select: none; /* Firefox 2+ */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none;
+    }
+
+        .caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+            transition: all 0.45s;
+        }
+
+    .caret-down::before {
+        -ms-transform: rotate(60deg); /* IE 9 */
+        -webkit-transform: rotate(60deg); /* Safari */
+        transform: rotate(60deg);
+        transition: all 0.45s; 
+    }
+
+    .nested {
+        display: none;
+        transition: all 0.45s;
+    }
+
+    .active {
+        display: block;
+        transition: all 0.45s;
+    }
+
+    /*css end*/

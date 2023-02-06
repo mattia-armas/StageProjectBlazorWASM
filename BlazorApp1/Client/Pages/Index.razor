@@ -1,8 +1,10 @@
 ﻿@page "/"
+@using BlazorApp1.Client.Controls
+@using BlazorApp1.Client.Shared
 <AuthorizeView>
     <Authorized>
-        <p>Welcome to BlazorApp</p>
-        <SurveyPrompt Title="How is Blazor working for you?" />
+        <TreeView Tvalue="Item" DataSource="@MyFolder" Id="Id" Text="Name" ItemId="ItemId" Expanded="Expanded" HasChildren="HasSubFolder">
+        </TreeView>
     </Authorized>
     <Authorizing>
         <h1>
@@ -18,3 +20,17 @@
         </h1>
     </Authorizing>
 </AuthorizeView>
+
+@code{
+    List<Item> MyFolder = new List<Item>();
+    protected override Task OnInitializedAsync()
+    {
+        MyFolder.Add(new Item { Id = "1", Name = "Summary", HasSubFolder = true, Expanded = true, ItemId = "" });
+        MyFolder.Add(new Item { Id = "2", Name = "Result", ItemId = "1", HasSubFolder = true, Expanded = true });
+        MyFolder.Add(new Item { Id = "3", Name = "Primary", ItemId = "2", HasSubFolder = false, Expanded = true });
+        MyFolder.Add(new Item { Id = "4", Name = "Secondary", ItemId = "6", HasSubFolder = false, Expanded = true });
+        MyFolder.Add(new Item { Id = "5", Name = "Industry", ItemId = "6", HasSubFolder = false, Expanded = true });
+        MyFolder.Add(new Item { Id = "6", Name = "Technology", ItemId = "2", HasSubFolder = true, Expanded = true });
+        return base.OnInitializedAsync();
+    } 
+}

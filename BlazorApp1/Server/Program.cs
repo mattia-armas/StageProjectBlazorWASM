@@ -1,3 +1,4 @@
+using BlazorApp1.Server.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
